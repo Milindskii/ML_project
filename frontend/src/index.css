@@ -6,23 +6,23 @@
 body {
   margin: 0;
   font-family: "Inter", system-ui, -apple-system, sans-serif;
-  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f8fafc 100%);
   min-height: 100vh;
-  color: #e2e8f0;
+  color: #0f172a;
 }
 
 /* Soft glow on glass cards */
 .glass-card {
   border-radius: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(24px);
-  box-shadow: 0 0 24px rgba(56, 189, 248, 0.35);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
 }
 
 .glass-card:hover {
   border-color: rgba(34, 211, 238, 0.3);
-  box-shadow: 0 0 28px rgba(56, 189, 248, 0.45);
+  box-shadow: 0 4px 28px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 

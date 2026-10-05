@@ -22,7 +22,7 @@ export default function InsightsPanel({ insights }) {
     >
       <div className="mb-4 flex items-center gap-2">
         <Lightbulb className="h-5 w-5 text-amber-400" />
-        <h2 className="text-lg font-semibold text-white">Business Insights</h2>
+        <h2 className="text-lg font-semibold text-slate-900">Business Insights</h2>
       </div>
 
       <div className="mb-4 flex flex-wrap gap-2">
@@ -45,14 +45,14 @@ export default function InsightsPanel({ insights }) {
 
       <div className="grid gap-6 lg:grid-cols-2">
         <div>
-          <h3 className="mb-2 flex items-center gap-1 text-sm font-medium text-slate-300">
+          <h3 className="mb-2 flex items-center gap-1 text-sm font-medium text-slate-700">
             <BarChart3 className="h-4 w-4" /> Key Insights
           </h3>
           <ul className="space-y-2">
             {insightList.map((text, i) => (
               <motion.li
                 key={i}
-                className="rounded-lg border border-white/5 bg-slate-800/40 px-3 py-2 text-sm text-slate-300"
+                className="rounded-lg border border-slate-300/30 bg-white/40 px-3 py-2 text-sm text-slate-700"
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.05 }}
@@ -64,7 +64,7 @@ export default function InsightsPanel({ insights }) {
         </div>
 
         <div>
-          <h3 className="mb-2 flex items-center gap-1 text-sm font-medium text-slate-300">
+          <h3 className="mb-2 flex items-center gap-1 text-sm font-medium text-slate-700">
             <Target className="h-4 w-4" /> Recommendations
           </h3>
           <ul className="space-y-2">
@@ -82,16 +82,16 @@ export default function InsightsPanel({ insights }) {
 
       {advertising_effectiveness.length > 0 && (
         <div className="mt-6">
-          <h3 className="mb-3 text-sm font-medium text-slate-300">
+          <h3 className="mb-3 text-sm font-medium text-slate-700">
             Advertising Effectiveness
           </h3>
           <div className="grid gap-3 sm:grid-cols-3">
             {advertising_effectiveness.map((ch) => (
               <div
                 key={ch.channel}
-                className="rounded-xl border border-white/10 bg-slate-800/50 p-4"
+                className="rounded-xl border border-slate-300/50 bg-white/50 p-4"
               >
-                <p className="text-sm font-medium text-white">{ch.channel}</p>
+                <p className="text-sm font-medium text-slate-900">{ch.channel}</p>
                 <p className="mt-1 text-2xl font-bold text-cyan-400">
                   {ch.effectiveness}%
                 </p>

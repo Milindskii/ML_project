@@ -10,7 +10,7 @@ export default function LoadingSpinner({ label = "Loading..." }) {
       animate={{ opacity: 1 }}
     >
       <Loader2 className="h-10 w-10 animate-spin text-cyan-400" />
-      <p className="text-sm text-slate-400">{label}</p>
+      <p className="text-sm text-slate-600">{label}</p>
     </motion.div>
   );
 }

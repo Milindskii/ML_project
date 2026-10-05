@@ -25,7 +25,7 @@ export default function DatasetTable({ data, summary }) {
       <div className="mb-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Database className="h-5 w-5 text-cyan-400" />
-          <h2 className="text-lg font-semibold text-white">Dataset Preview</h2>
+          <h2 className="text-lg font-semibold text-slate-900">Dataset Preview</h2>
         </div>
         <span className="rounded-full bg-cyan-500/20 px-3 py-1 text-xs text-cyan-300">
           {data?.total_rows ?? 0} rows
@@ -34,27 +34,27 @@ export default function DatasetTable({ data, summary }) {
 
       {summary && (
         <div className="mb-4 grid grid-cols-2 gap-2 text-xs sm:grid-cols-4">
-          <div className="rounded-lg bg-slate-800/60 p-2">
+          <div className="rounded-lg bg-white/60 p-2">
             <span className="text-slate-500">Avg Revenue</span>
-            <p className="font-semibold text-white">
+            <p className="font-semibold text-slate-900">
               ${Number(summary.avg_sales_revenue).toLocaleString()}
             </p>
           </div>
-          <motion.div className="rounded-lg bg-slate-800/60 p-2">
+          <motion.div className="rounded-lg bg-white/60 p-2">
             <span className="text-slate-500">Avg TV</span>
-            <p className="font-semibold text-white">
+            <p className="font-semibold text-slate-900">
               ${Number(summary.avg_tv_spend).toLocaleString()}
             </p>
           </motion.div>
-          <div className="rounded-lg bg-slate-800/60 p-2">
+          <div className="rounded-lg bg-white/60 p-2">
             <span className="text-slate-500">Avg Social</span>
-            <p className="font-semibold text-white">
+            <p className="font-semibold text-slate-900">
               ${Number(summary.avg_social_spend).toLocaleString()}
             </p>
           </div>
-          <div className="rounded-lg bg-slate-800/60 p-2">
+          <div className="rounded-lg bg-white/60 p-2">
             <span className="text-slate-500">Avg Influencer</span>
-            <p className="font-semibold text-white">
+            <p className="font-semibold text-slate-900">
               ${Number(summary.avg_influencer_spend).toLocaleString()}
             </p>
           </div>
@@ -64,7 +64,7 @@ export default function DatasetTable({ data, summary }) {
       <div className="custom-scroll overflow-x-auto">
         <table className="w-full min-w-[640px] text-left text-sm">
           <thead>
-            <tr className="border-b border-white/10 text-xs uppercase text-slate-400">
+            <tr className="border-b border-slate-300/50 text-xs uppercase text-slate-600">
               {columns.map((col) => (
                 <th key={col} className="px-3 py-2 font-medium">
                   {COLUMN_LABELS[col] || col}
@@ -76,10 +76,10 @@ export default function DatasetTable({ data, summary }) {
             {preview.map((row, idx) => (
               <tr
                 key={idx}
-                className="border-b border-white/5 transition hover:bg-white/5"
+                className="border-b border-slate-300/30 transition hover:bg-white/5"
               >
                 {columns.map((col) => (
-                  <td key={col} className="px-3 py-2 text-slate-300">
+                  <td key={col} className="px-3 py-2 text-slate-700">
                     {typeof row[col] === "number"
                       ? col.includes("revenue") || col.includes("spend")
                         ? `$${row[col].toLocaleString()}`

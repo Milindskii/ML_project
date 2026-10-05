@@ -19,7 +19,7 @@ export default function PredictionResult({ result, loading }) {
         animate={{ opacity: 1 }}
       >
         <TrendingUp className="mb-3 h-12 w-12 text-slate-600" />
-        <p className="text-slate-400">
+        <p className="text-slate-600">
           Submit the form to see your AI-powered sales forecast.
         </p>
       </motion.div>
@@ -64,13 +64,13 @@ export default function PredictionResult({ result, loading }) {
         {items.map((item, i) => (
           <motion.div
             key={item.label}
-            className="rounded-xl border border-white/5 bg-slate-800/50 p-4"
+            className="rounded-xl border border-slate-300/30 bg-white/50 p-4"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.1 }}
           >
             <item.icon className={`mb-2 h-5 w-5 ${item.color}`} />
-            <p className="text-xs text-slate-400">{item.label}</p>
+            <p className="text-xs text-slate-600">{item.label}</p>
             <p className={`text-xl font-bold ${item.color}`}>{item.value}</p>
           </motion.div>
         ))}

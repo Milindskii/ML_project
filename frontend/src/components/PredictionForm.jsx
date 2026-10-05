@@ -34,7 +34,7 @@ export default function PredictionForm({
   };
 
   const inputClass =
-    "w-full rounded-xl border border-white/10 bg-slate-800/80 px-4 py-2.5 text-sm text-white outline-none transition focus:border-cyan-400/50 focus:ring-2 focus:ring-cyan-400/20";
+    "w-full rounded-xl border border-slate-300/50 bg-white/80 px-4 py-2.5 text-sm text-slate-900 outline-none transition focus:border-cyan-400/50 focus:ring-2 focus:ring-cyan-400/20";
 
   return (
     <motion.form
@@ -45,16 +45,16 @@ export default function PredictionForm({
     >
       <div className="mb-6 flex items-center gap-2">
         <Sparkles className="h-5 w-5 text-violet-400" />
-        <h2 className="text-lg font-semibold text-white">Sales Prediction</h2>
+        <h2 className="text-lg font-semibold text-slate-900">Sales Prediction</h2>
       </div>
-      <p className="mb-4 text-sm text-slate-400">
+      <p className="mb-4 text-sm text-slate-600">
         Enter your marketing spend and audience details. Our Random Forest model
         will forecast sales revenue.
       </p>
 
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="block">
-          <span className="mb-1 block text-xs text-slate-400">TV Advertising ($)</span>
+          <span className="mb-1 block text-xs text-slate-600">TV Advertising ($)</span>
           <input
             type="number"
             name="tv_advertising_spend"
@@ -65,7 +65,7 @@ export default function PredictionForm({
           />
         </label>
         <label className="block">
-          <span className="mb-1 block text-xs text-slate-400">Social Media ($)</span>
+          <span className="mb-1 block text-xs text-slate-600">Social Media ($)</span>
           <input
             type="number"
             name="social_media_spend"
@@ -76,7 +76,7 @@ export default function PredictionForm({
           />
         </label>
         <label className="block">
-          <span className="mb-1 block text-xs text-slate-400">Influencer Marketing ($)</span>
+          <span className="mb-1 block text-xs text-slate-600">Influencer Marketing ($)</span>
           <input
             type="number"
             name="influencer_marketing_spend"
@@ -87,7 +87,7 @@ export default function PredictionForm({
           />
         </label>
         <label className="block">
-          <span className="mb-1 block text-xs text-slate-400">Target Audience Size</span>
+          <span className="mb-1 block text-xs text-slate-600">Target Audience Size</span>
           <input
             type="number"
             name="target_audience_size"
@@ -98,7 +98,7 @@ export default function PredictionForm({
           />
         </label>
         <label className="block">
-          <span className="mb-1 block text-xs text-slate-400">Platform Type</span>
+          <span className="mb-1 block text-xs text-slate-600">Platform Type</span>
           <select
             name="platform_type"
             value={form.platform_type}
@@ -113,7 +113,7 @@ export default function PredictionForm({
           </select>
         </label>
         <label className="block">
-          <span className="mb-1 block text-xs text-slate-400">Region</span>
+          <span className="mb-1 block text-xs text-slate-600">Region</span>
           <select
             name="region"
             value={form.region}

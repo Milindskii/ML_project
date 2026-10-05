@@ -107,17 +107,17 @@ export default function App() {
   return (
     <div className="min-h-screen pb-16">
       {/* Header */}
-      <header className="border-b border-white/10 bg-slate-900/40 backdrop-blur-md">
+      <header className="border-b border-slate-300/50 bg-slate-50/40 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-4 py-5 sm:px-6">
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
             <h1 className="text-2xl font-bold sm:text-3xl">
               <span className="gradient-text">SalesVisionAI</span>
             </h1>
-            <p className="text-sm text-slate-400">
+            <p className="text-sm text-slate-600">
               AI-powered sales prediction dashboard
             </p>
           </motion.div>
-          <div className="flex items-center gap-2 rounded-full border border-white/10 bg-slate-800/60 px-4 py-2 text-sm">
+          <div className="flex items-center gap-2 rounded-full border border-slate-300/50 bg-white/60 px-4 py-2 text-sm">
             {connected ? (
               <>
                 <Wifi className="h-4 w-4 text-emerald-400" />
@@ -198,7 +198,7 @@ export default function App() {
         )}
       </main>
 
-      <footer className="fixed bottom-0 left-0 right-0 border-t border-white/5 bg-slate-900/80 py-2 text-center text-xs text-slate-500 backdrop-blur">
+      <footer className="fixed bottom-0 left-0 right-0 border-t border-slate-300/30 bg-slate-50/80 py-2 text-center text-xs text-slate-500 backdrop-blur">
         SalesVisionAI · React + Flask · Random Forest ML
       </footer>
     </div>

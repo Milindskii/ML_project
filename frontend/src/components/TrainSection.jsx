@@ -16,7 +16,7 @@ export default function TrainSection({ metrics, onTrain, training }) {
       <div className="flex flex-wrap items-center justify-between gap-4">
         <div className="flex items-center gap-2">
           <Brain className="h-5 w-5 text-violet-400" />
-          <h2 className="text-lg font-semibold text-white">Model Training</h2>
+          <h2 className="text-lg font-semibold text-slate-900">Model Training</h2>
         </div>
         <motion.button
           onClick={onTrain}
@@ -30,22 +30,22 @@ export default function TrainSection({ metrics, onTrain, training }) {
         </motion.button>
       </div>
 
-      <p className="mt-2 text-sm text-slate-400">
+      <p className="mt-2 text-sm text-slate-600">
         Random Forest Regressor learns patterns from TV, social, influencer spend,
         audience size, platform, and region.
       </p>
 
       <div className="mt-4 grid grid-cols-3 gap-3">
         <div className="rounded-xl bg-gradient-to-br from-cyan-500/10 to-transparent p-4 text-center">
-          <p className="text-xs text-slate-400">Accuracy (R²)</p>
+          <p className="text-xs text-slate-600">Accuracy (R²)</p>
           <p className="text-2xl font-bold text-cyan-400">{accuracy}%</p>
         </div>
         <div className="rounded-xl bg-gradient-to-br from-violet-500/10 to-transparent p-4 text-center">
-          <p className="text-xs text-slate-400">R² Score</p>
+          <p className="text-xs text-slate-600">R² Score</p>
           <p className="text-2xl font-bold text-violet-400">{r2}</p>
         </div>
         <div className="rounded-xl bg-gradient-to-br from-emerald-500/10 to-transparent p-4 text-center">
-          <p className="text-xs text-slate-400">MAE</p>
+          <p className="text-xs text-slate-600">MAE</p>
           <p className="text-2xl font-bold text-emerald-400">${mae}</p>
         </div>
       </div>

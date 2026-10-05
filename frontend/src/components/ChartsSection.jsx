@@ -33,7 +33,7 @@ function ChartCard({ title, children }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
     >
-      <h3 className="mb-3 text-sm font-semibold text-slate-200">{title}</h3>
+      <h3 className="mb-3 text-sm font-semibold text-slate-800">{title}</h3>
       <div className="h-64 w-full min-h-[256px]">{children}</div>
     </motion.div>
   );
